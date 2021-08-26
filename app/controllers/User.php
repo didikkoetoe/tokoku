@@ -25,4 +25,14 @@ class User extends Controller
             exit;
         }
     }
+
+    public function logout()
+    {
+        session_destroy();
+        $_SESSION = [];
+        session_unset();
+
+        header('Location: ' . BASEURL);
+        exit;
+    }
 }
