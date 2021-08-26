@@ -61,4 +61,22 @@ class Admin extends Controller
 		header('Location: ' . BASEURL . '/Login');
 		exit;
 	}
+
+	public function getUbah()
+	{
+		echo json_encode($this->model('Produk_model')->getProdukById($_POST['id']));
+	}
+
+	public function ubah()
+	{
+		if ($this->model('Produk_model')->ubahProduk($_POST) > 0) {
+			Flasher::setFlash('Data produk berhasil', 'di ubah', 'success');
+			header('Location: ' . BASEURL . '/Admin');
+			exit;
+		} else {
+			Flasher::setFlash('Data produk gagal', 'di ubah', 'danger');
+			header('Location: ' . BASEURL . '/Admin');
+			exit;
+		}
+	}
 }
