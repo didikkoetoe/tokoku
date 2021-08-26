@@ -12,6 +12,9 @@ class User_model
 
     public function tambahUser($data)
     {
+        $data['password'] = password_hash(stripslashes($data['password']), PASSWORD_DEFAULT);
+
+
         $query = "INSERT INTO {$this->table} (nama, email, username, jenisKelamin, alamat, password) VALUES (:nama, :email, :username, :jenisKelamin, :alamat, :password)";
 
         $this->db->query($query);
@@ -25,5 +28,9 @@ class User_model
         $this->db->execute();
 
         return $this->db->rowCount();
+    }
+
+    public function getUser()
+    {
     }
 }
