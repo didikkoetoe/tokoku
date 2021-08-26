@@ -10,10 +10,15 @@ class Admin_model
         $this->db = new Database();
     }
 
-    public function getAdmin()
+    public function getAdmin($username, $password)
     {
-        $this->db->query("SELECT * FROM {$this->table}");
+        $this->db->query("SELECT * FROM {$this->table} WHERE username=:username AND password=:password");
 
-        // return $this->db->single();
+        $this->db->bind('username', $username);
+        $this->db->bind('password', $password);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
     }
 }
