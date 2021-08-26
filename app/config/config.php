@@ -1,6 +1,6 @@
 <?php
 
-define('BASEURL', 'http://localhost/mvc/public');
+define('BASEURL', 'http://localhost/tokoku/public');
 
 // Database
 define('DBHOST', 'localhost');
