@@ -26,7 +26,7 @@
 			</div>
 			<form class="d-flex">
 				<input class="form-control me-2" type="search" placeholder="Cari..." aria-label="Search" id="keyword">
-				<a href="<?= BASEURL; ?>/Admin/logout" class="btn btn-danger">LogOut</a>
+				<a href="<?= BASEURL; ?>/Admin/logout" class="btn btn-danger" onclick="return confirm('Yakin untuk keluar ?');">LogOut</a>
 			</form>
 		</div>
 	</nav>
