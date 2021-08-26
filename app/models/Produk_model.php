@@ -69,7 +69,7 @@ class Produk_model
         $this->db->bind('berat', $data['berat']);
         $this->db->bind('kategori', $data['kategori']);
         $this->db->bind('deskripsi', $data['deskripsi']);
-        $this->db->bind('gambar', $data['gambar']);
+        $this->db->bind('gambar', $this->upload());
         $this->db->bind('id', $data['id']);
 
         $this->db->execute();
@@ -86,10 +86,7 @@ class Produk_model
 
         // Cek apakah ada file yang di upload atau tidak
         if ($error === 4) {
-            echo "<script>
-        alert('Belum ada foto yang upload');
-        </script>";
-            return false;
+            return 'rog.jpg';
             die;
         }
 
