@@ -21,7 +21,7 @@
                     <?= Flasher::flash(); ?>
 
                     <hr>
-                    <form action="" method="POST">
+                    <form action="<?= BASEURL; ?>/Login/login" method="POST">
                         <div class="mb-3">
                             <div class="input-group">
                                 <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
