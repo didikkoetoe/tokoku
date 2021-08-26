@@ -51,4 +51,14 @@ class Admin extends Controller
 			exit;
 		}
 	}
+
+	public function logout()
+	{
+		session_destroy();
+		unset($_SESSION['admin']);
+		$_SESSION = [];
+
+		header('Location: ' . BASEURL . '/Login');
+		exit;
+	}
 }
