@@ -46,7 +46,7 @@
 							<td><?= $produk['kategori']; ?></td>
 							<td><?= $produk['deskripsi']; ?></td>
 							<td>
-								<img src="<?= BASEURL; ?>/img/<?= $produk['gambar']; ?>" alt="">
+								<img src="<?= BASEURL; ?>/img/<?= $produk['gambar']; ?>" alt="" class="img-thumbnail">
 							</td>
 							<td>
 								<a href="<?= BASEURL; ?>/Admin/edit/<?= $produk['id']; ?>" class="btn btn-warning edit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="<?= $produk['id']; ?>">Edit</a>
