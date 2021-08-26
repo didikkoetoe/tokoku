@@ -55,7 +55,7 @@ class Admin extends Controller
 	public function logout()
 	{
 		session_destroy();
-		unset($_SESSION['admin']);
+		session_unset();
 		$_SESSION = [];
 
 		header('Location: ' . BASEURL . '/Login');
