@@ -71,7 +71,7 @@
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<form action="<?= BASEURL; ?>/Admin/tambah" method="POST">
+				<form action="<?= BASEURL; ?>/Admin/tambah" method="POST" enctype="multipart/form-data">
 
 					<input type="hidden" name="id" id="id">
 
@@ -126,7 +126,7 @@
 					<div class="mb-2">
 						<div class="input-group">
 							<div class="input-group-text"><i class="bi bi-image"></i></div>
-							<input id="gambar" type="text" name="gambar" required class="form-control">
+							<input id="gambar" type="file" name="gambar" required class="form-control">
 						</div>
 					</div>
 			</div>
