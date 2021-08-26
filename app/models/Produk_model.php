@@ -12,7 +12,7 @@ class Produk_model
 
     public function getALlProduk()
     {
-        $this->db->query("SELECT * FROM {$this->table}");
+        $this->db->query("SELECT * FROM {$this->table} ORDER BY id DESC");
 
         return $this->db->resultSet();
     }
