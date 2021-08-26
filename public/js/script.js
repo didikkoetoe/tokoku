@@ -23,20 +23,20 @@ $(document).ready(function () {
         $('.modal-body form').attr('action', 'http://localhost/tokoku/public/Admin/ubah');
 
         const id = $(this).data('id');
-
+        
         $.ajax({
             type: "post",
             url: "http://localhost/tokoku/public/Admin/getUbah",
             data: {id : id},
             dataType: "json",
             success: function (response) {
+                $('#id').val(response.id);
                 $('#nama').val(response.nama);
                 $('#harga').val(response.harga);
                 $('#berat').val(response.berat);
                 $('#kategori').val(response.kategori);
                 $('#deskripsi').val(response.deskripsi);
                 $('#gambar').val(response.gambar);
-                $('#id').val(response.id);
             }
         });
     });
