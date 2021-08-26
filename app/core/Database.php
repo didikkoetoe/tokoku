@@ -64,7 +64,7 @@ class Database
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function single($id)
+    public function single()
     {
         $this->execute();
 
