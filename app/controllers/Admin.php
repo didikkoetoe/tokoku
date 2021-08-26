@@ -5,6 +5,15 @@
  */
 class Admin extends Controller
 {
+
+	public function __construct()
+	{
+		if ($_SESSION['admin'] !== 'Didik Prabowo') {
+			header('Location: ' . BASEURL . '/Login');
+			exit;
+		}
+	}
+
 	public function index()
 	{
 		$data = [
@@ -20,11 +29,11 @@ class Admin extends Controller
 	public function tambah()
 	{
 		if ($this->model('Produk_model')->tambahProduk($_POST) > 0) {
-			Flasher::setFlash('Berhasil', 'di tambahkan', 'success');
+			Flasher::setFlash('Data produk berhasil', 'di tambahkan', 'success');
 			header('Location: ' . BASEURL . '/Admin');
 			exit;
 		} else {
-			Flasher::setFlash('Gagal', 'di tambahkan', 'danger');
+			Flasher::setFlash('Data produk gagal', 'di tambahkan', 'danger');
 			header('Location: ' . BASEURL . '/Admin');
 			exit;
 		}
