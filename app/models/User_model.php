@@ -30,7 +30,13 @@ class User_model
         return $this->db->rowCount();
     }
 
-    public function getUser()
+    public function getUser($username)
     {
+
+        $this->db->query("SELECT * FROM {$this->table} WHERE username=:username");
+
+        $this->db->bind('username', $username);
+
+        return $this->db->single();
     }
 }
