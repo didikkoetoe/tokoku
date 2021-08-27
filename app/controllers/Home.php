@@ -14,10 +14,12 @@ class Home extends Controller
     {
         $data = [
             'title' => 'Home',
+            'nama' => $_SESSION['user'],
+            'produk' => $this->model('Produk_model')->getAllProduk()
         ];
 
         $this->view('public/header', $data);
-        $this->view('home/index');
-        $this->view('public/header');
+        $this->view('home/index', $data);
+        $this->view('public/footer');
     }
 }
