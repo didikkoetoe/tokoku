@@ -22,4 +22,16 @@ class Home extends Controller
         $this->view('home/index', $data);
         $this->view('public/footer');
     }
+
+    public function detail($id)
+    {
+        $data = [
+            'title' => 'Detail Produk',
+            'nama' => $_SESSION['user'],
+            'produk' => $this->model('Produk_model')->getProdukById($id)
+        ];
+        $this->view('public/header', $data);
+        $this->view('home/detail', $data);
+        $this->view('public/footer');
+    }
 }

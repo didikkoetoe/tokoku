@@ -2,6 +2,7 @@
 
 	<!-- Tombol tambah data -->
 	<button type="button" class="btn btn-primary float-end tombolTambah" data-bs-toggle="modal" data-bs-target="#exampleModal">Tambah Produk</button>
+	<a href="<?= BASEURL; ?>/Admin/cetak" class="btn btn-success float-end mx-2">Cetak</a>
 
 	<h2 class="text-center">Daftar Produk</h2>
 
@@ -13,11 +14,11 @@
 		<div class="col-2">
 			<h4 class="text-center">Kategori <i class="bi bi-filter"></i></h4>
 			<ul class="list-group">
-				<li class="list-group-item">An item</li>
-				<li class="list-group-item">A second item</li>
-				<li class="list-group-item">A third item</li>
-				<li class="list-group-item">A fourth item</li>
-				<li class="list-group-item">And a fifth one</li>
+				<li class="list-group-item">Semua kategori</li>
+				<li class="list-group-item">Buku</li>
+				<li class="list-group-item">Komputer</li>
+				<li class="list-group-item">Handphone</li>
+				<li class="list-group-item">Elektronik</li>
 			</ul>
 		</div>
 
@@ -49,7 +50,7 @@
 								<img src="<?= BASEURL; ?>/img/<?= $produk['gambar']; ?>" alt="" class="img-thumbnail">
 							</td>
 							<td>
-								<a href="<?= BASEURL; ?>/Admin/edit/<?= $produk['id']; ?>" class="btn btn-warning edit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="<?= $produk['id']; ?>">Edit</a>
+								<a href="<?= BASEURL; ?>/Admin/edit/<?= $produk['id']; ?>" class="btn btn-warning edit mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="<?= $produk['id']; ?>">Edit</a>
 
 								<a href="<?= BASEURL; ?>/Admin/hapus/<?= $produk['id']; ?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menhapus ?');">Hapus</a>
 							</td>

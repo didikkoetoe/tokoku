@@ -1,9 +1,9 @@
 <?php
 
-define('BASEURL', 'http://localhost/tokoku/public');
+define('BASEURL', 'http://tokoku04.infinityfreeapp.com/public');
 
 // Database
-define('DBHOST', 'localhost');
-define('DBUSER', 'root');
-define('DBPASS', '');
-define('DBNAME', 'vsga');
+define('DBHOST', 'sql206.epizy.com');
+define('DBUSER', 'epiz_29553105');
+define('DBPASS', 'pd6Aj2nlw9');
+define('DBNAME', 'epiz_29553105_vsga');

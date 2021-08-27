@@ -31,6 +31,9 @@
         </div>
     </div>
 
+    <h3 class="text-center">Daftar Produk</h3>
+    <hr>
+
     <div class="row">
         <?php foreach ($data['produk'] as $produk) : ?>
             <div class="col-4 mb-3">
@@ -38,8 +41,8 @@
                     <img src="<?= BASEURL; ?>/img/<?= $produk['gambar']; ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?= $produk['nama']; ?></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text"><strong>Deskripsi : <br></strong><?= $produk['deskripsi']; ?></p>
+                        <a href="<?= BASEURL; ?>/Home/detail/<?= $produk['id']; ?>" class="btn btn-primary">Detail</a>
                     </div>
                 </div>
             </div>

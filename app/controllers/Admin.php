@@ -91,4 +91,12 @@ class Admin extends Controller
 		$this->view('admin/index', $data);
 		$this->view('templates/footer');
 	}
+
+	public function cetak()
+	{
+		$data = [
+			'produk' => $this->model('Produk_model')->getALlProduk()
+		];
+		$this->view('cetak', $data);
+	}
 }

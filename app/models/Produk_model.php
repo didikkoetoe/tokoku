@@ -117,7 +117,7 @@ class Produk_model
         $nama .= $ekstensiFiks;
 
         // Pindahkan file upload ke directory kita
-        move_uploaded_file($tmpName, '/opt/lampp/htdocs/tokoku/public/img/' . $nama);
+        move_uploaded_file($tmpName, '/htdocs/public/img' . $nama);
 
         return $nama;
     }
