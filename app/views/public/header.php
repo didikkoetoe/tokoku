@@ -8,6 +8,7 @@
     <title><?= $data['title']; ?></title>
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/home.css">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Tokoku</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,9 +40,7 @@
             </div>
             <div class="d-flex">
                 <div class="dropdown me-2">
-                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Didik Prabowo
-                    </button>
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><?= $data['nama']; ?></button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Setting Akun</a></li>
                         <li><a class="dropdown-item" href="#">Ubah Tema</a></li>
@@ -49,7 +48,7 @@
                     </ul>
                 </div>
 
-                <a href="admin/logout.php" class="btn btn-danger">Logout</a>
+                <a href="<?= BASEURL; ?>/User/logout" class="btn btn-danger" onclick="return confirm('Yakin ingin keluar ?');">Logout</a>
             </div>
         </div>
     </nav>
