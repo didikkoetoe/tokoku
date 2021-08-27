@@ -24,8 +24,11 @@
 					<a class="nav-link" href="#"><i class="bi bi-chat-fill"></i> Chat</a>
 				</div>
 			</div>
-			<form class="d-flex">
-				<input class="form-control me-2" type="search" placeholder="Cari..." aria-label="Search" id="keyword">
+			<form class="d-flex" action="<?= BASEURL; ?>/Admin/cari" method="POST">
+				<div class="input-group mx-2">
+					<input type="text" class="form-control" placeholder="Masukan pencarian..." name="keyword" id="keyword">
+					<button class="btn btn-outline-secondary" type="submit" id="tombolCari" autocomplete="off">Cari</button>
+				</div>
 				<a href="<?= BASEURL; ?>/Admin/logout" class="btn btn-danger" onclick="return confirm('Yakin untuk keluar ?');">LogOut</a>
 			</form>
 		</div>
