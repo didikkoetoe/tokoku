@@ -79,4 +79,16 @@ class Admin extends Controller
 			exit;
 		}
 	}
+
+	public function cari()
+	{
+		$data = [
+			'title' => 'Admin',
+			'produk' => $this->model('Produk_model')->cariProduk()
+		];
+
+		$this->view('templates/header', $data);
+		$this->view('admin/index', $data);
+		$this->view('templates/footer');
+	}
 }
