@@ -36,7 +36,7 @@
                         </div>
                         <div class="mb-3">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="ingat">
+                                <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="ingat">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Ingat Saya
                                 </label>
